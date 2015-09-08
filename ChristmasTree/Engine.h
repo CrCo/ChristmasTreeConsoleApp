@@ -11,7 +11,7 @@
 
 @interface Engine : NSObject
 
-- (int) countForRow:(int) row;
++ (int) countForRow:(int) row;
 
 - (id) initWithRenderer: (NSObject<Renderer> *) renderer;
 

@@ -17,7 +17,7 @@
 
 @implementation Engine
 
-- (int) countForRow:(int) row {
++ (int) countForRow:(int) row {
     return (row - 1) * 2 + 1;
 }
 
@@ -31,7 +31,7 @@
 
 - (void) renderToRow: (int) row {
     for (int i = 1; i <= row; i++) {
-        [self.renderer renderLine:[self countForRow:i]];
+        [self.renderer renderLine:[Engine countForRow:i]];
     }
 }
 

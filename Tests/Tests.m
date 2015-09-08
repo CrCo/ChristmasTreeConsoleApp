@@ -62,13 +62,13 @@
 
 - (void)testFirstRowCountIsOne {
     
-    int count = [self.engine countForRow: 1];
+    int count = [Engine countForRow: 1];
     XCTAssertEqual(1, count, "First row always one");
 }
 
 - (void)testFourthRowCount {
     
-    int count = [self.engine countForRow: 4];
+    int count = [Engine countForRow: 4];
     XCTAssertEqual(7, count, "Fourth row is seven");
 }
 
