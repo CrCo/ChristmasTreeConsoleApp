@@ -80,10 +80,15 @@
 }
 
 - (void) testConsoleRenderer {
-    ConsoleRenderer *r  = [[ConsoleRenderer alloc] initWithCharacter:@"*"];
+    ConsoleRenderer *r  = [[ConsoleRenderer alloc] initWithCharacter:@"*" andMaxColumnSize:13];
     NSString *str = [r stringForRow:13];
     XCTAssertTrue([@"*************" isEqualToString:str]);
 }
 
+- (void) testConsoleRenderingInColumn {
+    ConsoleRenderer *r  = [[ConsoleRenderer alloc] initWithCharacter:@"*" andMaxColumnSize: 7];
+    NSString *str = [r stringForRow: 3];
+    XCTAssertTrue([@"  ***" isEqualToString:str]);
+}
 
 @end

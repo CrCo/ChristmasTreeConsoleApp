@@ -11,21 +11,27 @@
 @interface ConsoleRenderer()
 
 @property NSString *character;
+@property int maxColumnSize;
 
 @end
 
 @implementation ConsoleRenderer
 
-- (id) initWithCharacter: (NSString *) character {
+- (id) initWithCharacter: (NSString *) character andMaxColumnSize: (int) columnSize {
     self = [super init];
     if (self) {
         self.character = character;
+        self.maxColumnSize = columnSize;
     }
     return self;
 }
 
 - (NSString *)stringForRow:(int)count {
-    return [[[NSString alloc] init] stringByPaddingToLength:count withString:self.character startingAtIndex:0];
+    int spacesRequired = (self.maxColumnSize - count) / 2;
+    
+    NSString *str  = [[[NSString alloc] init] stringByPaddingToLength:spacesRequired withString:@" " startingAtIndex:0];
+    return [str stringByPaddingToLength:count + spacesRequired withString:self.character startingAtIndex:0];
+;
 }
 
 - (void) renderLine:(int)count {

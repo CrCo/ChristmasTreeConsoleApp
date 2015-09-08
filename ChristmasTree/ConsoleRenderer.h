@@ -11,7 +11,7 @@
 
 @interface ConsoleRenderer : NSObject <Renderer>
 
-- (id) initWithCharacter: (NSString *) character;
+- (id) initWithCharacter: (NSString *) character andMaxColumnSize: (int) columnSize;
 
 - (NSString *) stringForRow: (int) count;
 
