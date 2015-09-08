@@ -10,6 +10,7 @@
 #import <XCTest/XCTest.h>
 #import "Engine.h"
 #import "Renderer.h"
+#import "ConsoleRenderer.h"
 
 
 @interface TestRenderer: NSObject <Renderer>
@@ -71,11 +72,17 @@
     XCTAssertEqual(7, count, "Fourth row is seven");
 }
 
-- (void)testRendering {
+- (void)testRenderingUsingEngine {
     [self.engine renderToRow:2];
     
     XCTAssertEqual(1, [[self.renderer.array objectAtIndex:0] intValue]);
     XCTAssertEqual(3, [[self.renderer.array objectAtIndex:1] intValue]);
+}
+
+- (void) testConsoleRenderer {
+    ConsoleRenderer *r  = [[ConsoleRenderer alloc] initWithCharacter:@"*"];
+    NSString *str = [r stringForRow:13];
+    XCTAssertTrue([@"*************" isEqualToString:str]);
 }
 
 

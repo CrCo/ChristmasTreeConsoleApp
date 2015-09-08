@@ -11,4 +11,8 @@
 
 @interface ConsoleRenderer : NSObject <Renderer>
 
+- (id) initWithCharacter: (NSString *) character;
+
+- (NSString *) stringForRow: (int) count;
+
 @end
