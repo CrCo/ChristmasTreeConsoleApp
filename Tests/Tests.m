@@ -9,10 +9,38 @@
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
 #import "Engine.h"
+#import "Renderer.h"
+
+
+@interface TestRenderer: NSObject <Renderer>
+
+@property NSMutableArray *array;
+
+- (id) init;
+
+@end
+
+@implementation TestRenderer
+
+- (id) init {
+    self = [super init];
+    if (self) {
+        self.array = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+- (void) renderLine: (int) count {
+    NSNumber *num = [NSNumber numberWithInt:count];
+    [self.array addObject:num];
+}
+
+@end
 
 @interface Tests : XCTestCase
 
 @property (nonatomic) Engine *engine;
+@property (nonatomic) TestRenderer *renderer;
 
 @end
 
@@ -21,7 +49,8 @@
 
 - (void)setUp {
     [super setUp];
-    self.engine = [[Engine alloc] init];
+    self.renderer = [[TestRenderer alloc] init];
+    self.engine = [[Engine alloc] initWithRenderer: self.renderer];
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
@@ -40,6 +69,13 @@
     
     int count = [self.engine countForRow: 4];
     XCTAssertEqual(7, count, "Fourth row is seven");
+}
+
+- (void)testRendering {
+    [self.engine renderToRow:2];
+    
+    XCTAssertEqual(1, [[self.renderer.array objectAtIndex:0] intValue]);
+    XCTAssertEqual(3, [[self.renderer.array objectAtIndex:1] intValue]);
 }
 
 

@@ -11,6 +11,8 @@
 		370515B31B9E7C5D00FA525F /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370515B21B9E7C5D00FA525F /* Tests.m */; };
 		370515BC1B9E7DAF00FA525F /* Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = 370515BB1B9E7DAF00FA525F /* Engine.m */; };
 		370515BD1B9E7DAF00FA525F /* Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = 370515BB1B9E7DAF00FA525F /* Engine.m */; };
+		370515C51B9E881300FA525F /* ConsoleRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 370515C41B9E881300FA525F /* ConsoleRenderer.m */; };
+		370515C61B9E881300FA525F /* ConsoleRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 370515C41B9E881300FA525F /* ConsoleRenderer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +34,9 @@
 		370515B21B9E7C5D00FA525F /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		370515BB1B9E7DAF00FA525F /* Engine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Engine.m; sourceTree = "<group>"; };
 		370515BE1B9E7DBB00FA525F /* Engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
+		370515BF1B9E871200FA525F /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		370515C31B9E881300FA525F /* ConsoleRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsoleRenderer.h; sourceTree = "<group>"; };
+		370515C41B9E881300FA525F /* ConsoleRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsoleRenderer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +78,9 @@
 		370515921B9E7AF800FA525F /* ChristmasTree */ = {
 			isa = PBXGroup;
 			children = (
+				370515C31B9E881300FA525F /* ConsoleRenderer.h */,
+				370515C41B9E881300FA525F /* ConsoleRenderer.m */,
+				370515BF1B9E871200FA525F /* Renderer.h */,
 				370515BB1B9E7DAF00FA525F /* Engine.m */,
 				370515BE1B9E7DBB00FA525F /* Engine.h */,
 				370515931B9E7AF800FA525F /* main.m */,
@@ -177,6 +185,7 @@
 			files = (
 				370515941B9E7AF800FA525F /* main.m in Sources */,
 				370515BC1B9E7DAF00FA525F /* Engine.m in Sources */,
+				370515C51B9E881300FA525F /* ConsoleRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +195,7 @@
 			files = (
 				370515B31B9E7C5D00FA525F /* Tests.m in Sources */,
 				370515BD1B9E7DAF00FA525F /* Engine.m in Sources */,
+				370515C61B9E881300FA525F /* ConsoleRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
