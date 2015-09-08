@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		370515941B9E7AF800FA525F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 370515931B9E7AF800FA525F /* main.m */; };
+		370515B31B9E7C5D00FA525F /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370515B21B9E7C5D00FA525F /* Tests.m */; };
+		370515BC1B9E7DAF00FA525F /* Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = 370515BB1B9E7DAF00FA525F /* Engine.m */; };
+		370515BD1B9E7DAF00FA525F /* Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = 370515BB1B9E7DAF00FA525F /* Engine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +28,21 @@
 /* Begin PBXFileReference section */
 		370515901B9E7AF800FA525F /* ChristmasTree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ChristmasTree; sourceTree = BUILT_PRODUCTS_DIR; };
 		370515931B9E7AF800FA525F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		370515AE1B9E7C5D00FA525F /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		370515B21B9E7C5D00FA525F /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		370515BB1B9E7DAF00FA525F /* Engine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Engine.m; sourceTree = "<group>"; };
+		370515BE1B9E7DBB00FA525F /* Engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3705158D1B9E7AF800FA525F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		370515AB1B9E7C5D00FA525F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				370515921B9E7AF800FA525F /* ChristmasTree */,
+				370515AF1B9E7C5D00FA525F /* Tests */,
 				370515911B9E7AF800FA525F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				370515901B9E7AF800FA525F /* ChristmasTree */,
+				370515AE1B9E7C5D00FA525F /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,9 +73,19 @@
 		370515921B9E7AF800FA525F /* ChristmasTree */ = {
 			isa = PBXGroup;
 			children = (
+				370515BB1B9E7DAF00FA525F /* Engine.m */,
+				370515BE1B9E7DBB00FA525F /* Engine.h */,
 				370515931B9E7AF800FA525F /* main.m */,
 			);
 			path = ChristmasTree;
+			sourceTree = "<group>";
+		};
+		370515AF1B9E7C5D00FA525F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				370515B21B9E7C5D00FA525F /* Tests.m */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +108,23 @@
 			productReference = 370515901B9E7AF800FA525F /* ChristmasTree */;
 			productType = "com.apple.product-type.tool";
 		};
+		370515AD1B9E7C5D00FA525F /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 370515B41B9E7C5D00FA525F /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				370515AA1B9E7C5D00FA525F /* Sources */,
+				370515AB1B9E7C5D00FA525F /* Frameworks */,
+				370515AC1B9E7C5D00FA525F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 370515AE1B9E7C5D00FA525F /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +135,9 @@
 				ORGANIZATIONNAME = "Stephen Visser";
 				TargetAttributes = {
 					3705158F1B9E7AF800FA525F = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					370515AD1B9E7C5D00FA525F = {
 						CreatedOnToolsVersion = 6.4;
 					};
 				};
@@ -109,9 +155,20 @@
 			projectRoot = "";
 			targets = (
 				3705158F1B9E7AF800FA525F /* ChristmasTree */,
+				370515AD1B9E7C5D00FA525F /* Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		370515AC1B9E7C5D00FA525F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3705158C1B9E7AF800FA525F /* Sources */ = {
@@ -119,6 +176,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				370515941B9E7AF800FA525F /* main.m in Sources */,
+				370515BC1B9E7DAF00FA525F /* Engine.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		370515AA1B9E7C5D00FA525F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				370515B31B9E7C5D00FA525F /* Tests.m in Sources */,
+				370515BD1B9E7DAF00FA525F /* Engine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +272,7 @@
 		370515981B9E7AF800FA525F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -212,6 +280,41 @@
 		370515991B9E7AF800FA525F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		370515B51B9E7C5D00FA525F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		370515B61B9E7C5D00FA525F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -233,6 +336,14 @@
 			buildConfigurations = (
 				370515981B9E7AF800FA525F /* Debug */,
 				370515991B9E7AF800FA525F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		370515B41B9E7C5D00FA525F /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				370515B51B9E7C5D00FA525F /* Debug */,
+				370515B61B9E7C5D00FA525F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
